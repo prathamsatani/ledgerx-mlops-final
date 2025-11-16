@@ -4,3 +4,6 @@
 *.zip
 *.log
 *.dvc
+models/
+.mlflow/
+mlruns/

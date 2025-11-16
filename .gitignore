@@ -13,6 +13,11 @@ __pycache__/
 # DVC cache files (safe to ignore)
 *.dvc
 
+# Model files
+models/
+.mlflow/
+mlruns/
+
 # DO NOT IGNORE THESE ANYMORE:
 # reports/
 # data/

@@ -1,10 +1,15 @@
-client_config_backend: file
-client_config_file: client_secrets.json
+RAW_DATA_PATH: "/opt/airflow/data/raw/FATURA"
+PROCESSED_DATA_PATH: "/opt/airflow/data/processed/fatura_ocr.csv"
+REPORTS_PATH: "/opt/airflow/reports"
+MODEL_PATH: "/opt/airflow/models"
+MODEL_NAME: "fatura_model.joblib"
+CACHE_PATH: "/opt/airflow/data/processed/fatura_ocr_cache.csv"
+DAGS_PATH: "/opt/airflow/dags"
+SRC_PATH: "/opt/airflow/src"
+TESTS_PATH: "/opt/airflow/tests"
 
-save_credentials: True
-save_credentials_backend: file
-save_credentials_file: drive_creds.json
-
-get_refresh_token: True
-oauth_scope:
-  - https://www.googleapis.com/auth/drive
+# Model settings
+TARGET_VARIABLE: "total_amount" # Example target
+FEATURES: ["line_items", "tax_amount"] # Example features
+TEST_SIZE: 0.2
+RANDOM_STATE: 42
